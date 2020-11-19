@@ -1,0 +1,42 @@
+.card-container {
+  height: 100%;
+  border: 1px solid grey;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  display: flex;
+  justify-content: center;
+  flex: 1 0 20%;
+}
+
+.card-container .front {
+  background-color: aquamarine;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.card-container .back {
+  background-color: lightblue;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.card-container:hover {
+  cursor: pointer;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
